@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Visualización de Datos</title>
+    <!--
+      Cualquier cosa
+      .....
+      ....
+      ....
+    -->
+    <script>
+      // Algún comentario
+      /*
+      klsksd
+      sd
+      */
+     var mensaje_base = "He recibido";
+     var mi_numero = 123;
+     var mi_json = {
+       llave: "algo",
+       llave2: "valor",
+       LatLng: [-33.1234, -70.345]
+     }
+
+      function saludar(){
+        alert("Bienvenidos!!!" + mensaje_base);
+      }
+
+      function OtroMensaje(msj){
+        saludar();
+        console.log("He recibido: " + (msj * 2));
+        document.getElementById("mensaje").innerText = "He recibido: " + (msj * 2);
+      }
+    </script>
+  </head>
+  <body onload="saludar()">
+    <div class="container">
+      <h1 style="color: red">Bienvenidos! ñ ó</h1>
+      <br/>
+      <br/>
+      <button 
+        class="btn btn-success" 
+        onclick="OtroMensaje(123)">Salúdame!!!</button>
+      <br/>
+      <br/>
+      <div>
+        <h2 id="mensaje">algo x1</h2>
+        <span>algo x2</span>
+        <p>algo x3</p>
+      </div>
+      <hr/>
+      <img 
+        src="https://nodejs.org/static/images/logo.svg" 
+        alt="Logo de NodeJS"
+        class="img-fluid"
+      />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div class="row">
+        <div class="col-6">
+          <p>Visualizaciones bla bla bla...!!!</p>
+        </div>
+        <div class="col-6">
+          <p>Otra cosa</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.8432800849228!2d-70.62017548424933!3d-33.42733000371323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf630f72fb8b%3A0x3ea10684fa14f8a!2sInsert+Coin+Bar+-+Providencia!5e0!3m2!1ses-419!2scl!4v1560993323665!5m2!1ses-419!2scl"
+              frameborder="0" style="border:0" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
