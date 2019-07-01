@@ -78,5 +78,14 @@ module.exports = {
       .then(() => console.log('Archivo CSV de jugadores guardado.'))
       .catch((err) => console.log('Error al crear archivo CSV de jugadores.', err))
 
+  },
+
+  // Se define un método local, para escribir CSV
+  escribirJSON: function (data){
+    const fs = require('fs');
+
+    fs.writeFile('mensiones.json', data, 'utf8', function(){
+      console.log('Archivo json de jugadores.')
+    })
   }
 }

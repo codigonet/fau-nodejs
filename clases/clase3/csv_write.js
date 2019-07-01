@@ -1,6 +1,16 @@
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-const csvWriter = createCsvWriter({
+const csvWriter1 = createCsvWriter({
   path: 'salida.csv',
+  header: [
+    { id: 'name', title: 'Nombre' },
+    { id: 'surname', title: 'Apellido' },
+    { id: 'age', title: 'Edad' },
+    { id: 'gender', title: 'Genero' },
+  ]
+});
+
+const csvWriter2 = createCsvWriter({
+  path: 'salida_segunda.csv',
   header: [
     { id: 'name', title: 'Nombre' },
     { id: 'surname', title: 'Apellido' },
@@ -28,6 +38,8 @@ const data = [
   }
 ];
 
-csvWriter
-  .writeRecords(data)
-  .then(() => console.log('Archivo CSV listo!!!'));
+csvWriter1.writeRecords(data)
+  .then(() => console.log('Archivo CSV listo!!!'))
+  .catch((err)=> console.log("Ocurrió un error: ", err))
+
+csvWriter2.writeRecords(data)
