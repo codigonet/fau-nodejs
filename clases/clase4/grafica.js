@@ -5,13 +5,23 @@ d3.csv('jugadores.csv')
     
     console.log(datos)
 
+    let nombres = datos.map( function(elemento, indice){
+        console.log(indice, elemento)
+        return elemento.Jugador
+    } )
+
+    let menciones = datos.map(function (elemento, indice) {
+        console.log(indice, elemento)
+        return elemento.Menciones
+    })
+
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: nombres,
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Menciones',
+                data: menciones,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
