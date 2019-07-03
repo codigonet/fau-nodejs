@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Arica y Parinacota",
+        "mortalidad_2008": 12,
+        "mortalidad_2009": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Tarapacá",
+        "mortalidad_2008": 11,
+        "mortalidad_2009": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Antofagasta",
+        "mortalidad_2008": 52,
+        "mortalidad_2009": 37
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Atacama",
+        "mortalidad_2008": 22,
+        "mortalidad_2009": 15
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Coquimbo",
+        "mortalidad_2008": 15,
+        "mortalidad_2009": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Valparaiso",
+        "mortalidad_2008": 35,
+        "mortalidad_2009": 42
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "Región Metropolitana",
+        "mortalidad_2008": 155,
+        "mortalidad_2009": 128
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "Del Libertador Gral Bernardo O'Higgins",
+        "mortalidad_2008": 26,
+        "mortalidad_2009": 22
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "Del Maule",
+        "mortalidad_2008": 36,
+        "mortalidad_2009": 54
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "Del Bio Bío",
+        "mortalidad_2008": 66,
+        "mortalidad_2009": 59
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De La Araucanía",
+        "mortalidad_2008": 28,
+        "mortalidad_2009": 21
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Los Ríos",
+        "mortalidad_2008": 10,
+        "mortalidad_2009": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Los Lagos",
+        "mortalidad_2008": 26,
+        "mortalidad_2009": 28
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Aisén del Gral. Carlos Ibañez del Campo",
+        "mortalidad_2008": 10,
+        "mortalidad_2009": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Region": "De Magallanes y Antártica Chilena",
+        "mortalidad_2008": 8,
+        "mortalidad_2009": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.65752396667588,
+          -18.49025394481695
+        ]
+      }
+    }
+  ]
+}
