@@ -3,10 +3,18 @@ module.exports = {
   leerExcel: function (ARCHIVO, HOJA, callback) {
     const readXlsxFile = require('read-excel-file/node')
 
+    // TODO: Leer JSON Regiones
+    // const center_regions = 
+
     readXlsxFile(ARCHIVO, { sheet: HOJA })
     .then((data) => {
-      // console.log(data)
+      console.log(data)
       let datos_extraidos = data.slice(5,20).map((item)=>{
+        let coordenada_x = -69.657523966675882
+        let coordenada_y = -18.490253944816949
+        // TODO: asignar coordenadas
+        // coordenada_x = center_regions.regiones_centroides.properties.X
+        // coordenada_y = center_regions.regiones_centroides.properties.Y
         return { 
           "type": "Feature", 
           "properties": { 
@@ -16,7 +24,7 @@ module.exports = {
           }, 
           "geometry": { 
             "type": "Point", 
-            "coordinates": [-69.657523966675882, -18.490253944816949] 
+            "coordinates": [coordenada_x, coordenada_y] 
           } 
         }
       })
@@ -38,7 +46,7 @@ module.exports = {
   escribirJSON: function (data){
     const fs = require('fs');
 
-    fs.writeFile('mapa.geojson', JSON.stringify(data), 'utf8', function(){
+    fs.writeFile('mapa.json', JSON.stringify(data), 'utf8', function(){
       console.log('Archivo json creado correctamente.')
     })
   }
