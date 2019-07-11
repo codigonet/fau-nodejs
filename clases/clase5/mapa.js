@@ -17,7 +17,7 @@ L.marker(MAP_CENTER).addTo(map)
   .bindPopup('Esto es la Región Metropolitana.')
 
 // Agregar circulo marcador (CircleMarker) con información emergente (PopUp) de ejemplo
-L.circleMarker(MAP_CIRCLE, {radius: MAP_RADIUS}).addTo(map)
+L.circleMarker(MAP_CIRCLE, { radius: MAP_RADIUS }).addTo(map)
   .bindPopup('Esto es un dato de círculo.')
 
 function MostrarDato(feature, layer) {
@@ -38,6 +38,13 @@ function MostrarDato(feature, layer) {
 d3.json('./mapa.json')
   .then((geojson) => {
     L.geoJSON(geojson, {
-      onEachFeature: MostrarDato
+      onEachFeature: MostrarDato,
+      pointToLayer: function (geoJsonPoint, latlng) {
+        return L.circleMarker(latlng).bindPopup(`Mortalidad 2008: ${geoJsonPoint.mortalidad_2008}`)
+      },
+      style: function (geoJsonPoint) {
+        let color = (geoJsonPoint.mortalidad_2008 > 20) ? 'red' : 'green'
+        return { fillColor: color}
+      }
     }).addTo(map)
   })
