@@ -1,6 +1,8 @@
 // Definir atributos iniciales para el Mapa
 const MAP_ZOOM = 4
 const MAP_CENTER = [-33.4444, -70.6535]
+const MAP_CIRCLE = [-35.4444, -70.6535]
+const MAP_RADIUS = 5
 
 // Crear instancia del Mapa
 var map = L.map('myMap').setView(MAP_CENTER, MAP_ZOOM)
@@ -14,6 +16,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker(MAP_CENTER).addTo(map)
   .bindPopup('Esto es la Región Metropolitana.')
 
+// Agregar circulo marcador (CircleMarker) con información emergente (PopUp) de ejemplo
+L.circleMarker(MAP_CIRCLE, {radius: MAP_RADIUS}).addTo(map)
+  .bindPopup('Esto es un dato de círculo.')
+
 function MostrarDato(feature, layer) {
   // does this feature have a property named popupContent?
   if (feature.properties) {
@@ -25,6 +31,8 @@ function MostrarDato(feature, layer) {
     layer.bindPopup(dato_a_mostrar);
   }
 }
+
+
 
 // Se agrega data al Mapa
 d3.json('./mapa.json')
