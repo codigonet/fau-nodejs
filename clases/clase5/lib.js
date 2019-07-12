@@ -4,21 +4,29 @@ module.exports = {
     const readXlsxFile = require('read-excel-file/node')
 
     // TODO: Leer JSON Regiones
-    // const center_regions = 
+    const fs = require('fs');
+    const center_regions = fs.readFileSync('./center_regions.geojson')
+    const regions = JSON.parse(center_regions)
 
     readXlsxFile(ARCHIVO, { sheet: HOJA })
     .then((data) => {
-      console.log(data)
+      // console.log(data)
       let datos_extraidos = data.slice(5,20).map((item)=>{
         let coordenada_x = -69.657523966675882
         let coordenada_y = -18.490253944816949
-        // TODO: asignar coordenadas
-        // coordenada_x = center_regions.regiones_centroides.properties.X
-        // coordenada_y = center_regions.regiones_centroides.properties.Y
+
+        let nombre_region = item[0].replace(/\*/g, '')
+        regions.regiones_centroides.map( (r)=>{
+          if (nombre_region === r.properties.Region){
+            // Se asignan invertidos ya que así estén en el GEOJSON de referencia.
+            coordenada_x = r.properties.X
+            coordenada_y = r.properties.Y
+          }
+        } )
         return { 
           "type": "Feature", 
           "properties": { 
-            "Region": item[0].replace(/\*/g, ''),
+            "Region": nombre_region,
             "mortalidad_2008": item[13],
             "mortalidad_2009": item[15],
           }, 

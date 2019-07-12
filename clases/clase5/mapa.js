@@ -20,15 +20,42 @@ L.marker(MAP_CENTER).addTo(map)
 L.circleMarker(MAP_CIRCLE, { radius: MAP_RADIUS }).addTo(map)
   .bindPopup('Esto es un dato de círculo.')
 
+// Se establece una constante como referencia para mostrar "Información Adicional"
+const mas_info = document.getElementById("mas_info")
+
 function MostrarDato(feature, layer) {
-  // does this feature have a property named popupContent?
+  // Se valida si el objeto tiene la propiedad "properties"
   if (feature.properties) {
     let dato_a_mostrar = `<p>
       <h5>Región: ${feature.properties.Region}</h5><br/>
       <span><b>Mortalidad 2008</b>: ${feature.properties.mortalidad_2008}</span><br/>
-      <span><b>Mortalidad 2009</b>: ${feature.properties.mortalidad_2009}</span><br/>
     </p>`
     layer.bindPopup(dato_a_mostrar);
+    layer.on({
+      click: (event)=>{
+        // Se obtienen los datos desde las propiedades del JSON
+        let region = event.target.feature.properties.Region
+        let mortalidad_2008 = event.target.feature.properties.mortalidad_2008
+        let mortalidad_2009 = event.target.feature.properties.mortalidad_2009
+
+        // Se establece el tipo de "badge", de acuerdo a la condición de mortalidad entre un año y otro
+        let tipo_badge_2008 = (mortalidad_2008 > mortalidad_2009) ? 'badge-danger' : 'badge-primary'
+        let tipo_badge_2009 = (mortalidad_2008 < mortalidad_2009) ? 'badge-danger' : 'badge-primary'
+
+        // Se genera el HTML para representar la acción de Click sobre un marcador
+        let html_mortalidad = `
+          <div class="alert alert-primary" role="alert">
+            <p>
+              Mortalidad para la región: ${region} <br/>
+              Mortalidad 2008: <span class="badge badge-pill ${tipo_badge_2008}">${mortalidad_2008}</span> <br/>
+              Mortalidad 2009: <span class="badge badge-pill ${tipo_badge_2009}">${mortalidad_2009}</span>
+            </p>
+          </div>
+        `
+        // Se "escribe" el HTML en la página
+        mas_info.innerHTML = html_mortalidad
+      }
+    })
   }
 }
 
