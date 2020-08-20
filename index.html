@@ -1,41 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAU - VDG (Intro)</title>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Fau NodeJS</title>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="assets/css/highlight.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
-    </head>
+    <!-- Carga de Librería Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-locale-es-latest.js"></script>
 
-    <body>
-        <div class="highlight-blue">
-            <div class="container">
-                <div class="intro">
-                    <h2 class="text-center">programación y visualización de datos usando nodejs</h2>
-                    <p class="text-center">Curso impartido en la Facultad de Arquitectura y Urbanismo de la Universidad
-                        de Chile</p>
-                    <p class="text-center created-by">2019 - Cristian Acuña (@codigonet)</p>
-                </div>
+    <!-- Librería CSS para la apariencia de la aplicación -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css"
+    />
 
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <figure class="figure">
-                            <img src="./assets/img/curso_2019.jpg" class="figure-img img-fluid rounded" alt="Generación 2019">
-                            <figcaption class="text-center">Generación 2019.</figcaption>
-                        </figure>
-                    </div>
-                </div>
+    <!-- Archivos de la aplicación -->
+    <script src="gmap.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-            </div>
+  <body>
+    <div id="layout" class="pure-g">
+      <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+          <h1 class="brand-title">
+            Visualización de Datos Geográficos en Internet
+          </h1>
+          <h2 class="brand-tagline">fundamentos y aplicación</h2>
+
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="pure-button" href="http://codigonet.net" target="cdgn"
+                  >por Codigonet</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    </body>
+      </div>
 
+      <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+          <div class="posts">
+            <h1 class="content-subhead">Datos no espaciales</h1>
+
+            <!-- Población Mundial -->
+            <section class="post">
+              <header class="post-header">
+                <h2 class="post-title">Población Mundial</h2>
+
+                <p class="post-meta">
+                  Creado por
+                  <a
+                    href="https://codigonet.net"
+                    class="post-author"
+                    target="cdgn"
+                    >Cristian Acuña</a
+                  >
+                </p>
+              </header>
+
+              <div class="post-description">
+                <p>
+                  El siguiente gráfico muestra la evolución de la población
+                  mundial cada 10 años. <br />
+                  Esta información no contiene indicaciones de geolocalización.
+                </p>
+                <div id="my-graph">
+                  <!-- El gráfico se dibujará en este espacio -->
+                </div>
+                <span class="post-category post-category-js">
+                  Información obtenida desde
+                  <a
+                    href="https://www.worldometers.info/world-population/world-population-by-year/"
+                    class="post-image-meta"
+                  >
+                    WorldMeters.info
+                  </a>
+                </span>
+              </div>
+            </section>
+          </div>
+
+          <div class="posts">
+            <h1 class="content-subhead">Datos Espaciales</h1>
+
+            <!-- Población America Latina-->
+            <section class="post">
+              <header class="post-header">
+                <h2 class="post-title">Población América Latina</h2>
+
+                <p class="post-meta">
+                  Creado por
+                  <a
+                    href="https://codigonet.net"
+                    class="post-author"
+                    target="cdgn"
+                    >Cristian Acuña</a
+                  >
+                </p>
+              </header>
+
+              <div class="post-description">
+                <p>
+                  El siguiente mapa muestra la población de 2020 en cuatro
+                  países de America Latina<br />
+                  En este caso, la información está directamente relacionada a
+                  ubicaciones geográficas.
+                </p>
+                <div id="my-map">
+                  <!-- El gráfico se dibujará en este espacio -->
+                </div>
+                <span class="post-category post-category-js">
+                  Información obtenida desde
+                  <a
+                    href="https://www.worldometers.info/world-population/world-population-by-year/"
+                    class="post-image-meta"
+                  >
+                    WorldMeters.info
+                  </a>
+                </span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

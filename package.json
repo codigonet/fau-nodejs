@@ -1,0 +1,14 @@
+{
+  "name": "codigonet-dataviz",
+  "version": "1.0.0",
+  "description": "Visualización de Datos en Internet",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo This is a static template, there is no bundler or bundling involved!"
+  },
+  "keywords": ["dataviz", "plotly", "D3", "CSV"],
+  "author": "Cristian Acuña",
+  "license": "GPLv3",
+  "homepage": "https://codigonet.net"
+}
